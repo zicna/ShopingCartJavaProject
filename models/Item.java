@@ -8,8 +8,8 @@ public class Item{
         if(name == null || name.isBlank()){
             throw new IllegalArgumentException("Name cannot be null or blank");
         }
-        if(price < 0){
-            throw new IllegalArgumentException("Price cannot be less than zero.");
+        if(price <= 0){
+            throw new IllegalArgumentException("Price cannot be less than or zero.");
         }
         this.name = name;
         this.price = price;
