@@ -28,6 +28,9 @@ public class Cart{
     
 
     public void remove(String name){
+        if(items.size() < 1){
+            throw new IllegalStateException("Items array is empty, you cannot remove anything ");
+        }
         for (int i = 0; i < items.size(); i++) {
             if(items.get(i).getName().equals(name)){
                 items.remove(i);
@@ -36,6 +39,9 @@ public class Cart{
     }
 
     public String checkout(){
+        if(items.size() < 1){
+            throw new IllegalStateException("Items array is empty, you cannot remove anything ");
+        }
         double subtotal = 0;
         for (int i = 0; i < items.size(); i++) {
             subtotal += items.get(i).getPrice();
