@@ -28,7 +28,7 @@ public class Cart{
     
 
     public void remove(String name){
-        if(items.size() < 1){
+        if(items.isEmpty()){
             throw new IllegalStateException("Items array is empty, you cannot remove anything ");
         }
         for (int i = 0; i < items.size(); i++) {
@@ -39,7 +39,7 @@ public class Cart{
     }
 
     public String checkout(){
-        if(items.size() < 1){
+        if(items.isEmpty()){
             throw new IllegalStateException("Items array is empty, you cannot remove anything ");
         }
         double subtotal = 0;
@@ -63,6 +63,8 @@ public class Cart{
         }
         return temp;
     }
+
+    
 
 
 }
