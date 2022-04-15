@@ -25,6 +25,10 @@ public class Cart{
         return true;
     }
 
+    public boolean isEmpty(){
+        return this.items.isEmpty();
+    }
+
     
 
     public void remove(String name){
